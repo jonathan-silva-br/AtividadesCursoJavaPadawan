@@ -1,0 +1,13 @@
+
+public class Atlet extends Pessoa {
+	
+	public String getCategoria() {
+		String c = "";
+		if ((getPeso() <= 20) && (getIdade() >= 7 && getIdade() <= 10)) {
+			c = "Pena 7 a 10";
+		}
+		
+		return c;
+	}
+
+}

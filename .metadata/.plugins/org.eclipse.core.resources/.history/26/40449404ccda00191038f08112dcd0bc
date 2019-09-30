@@ -1,0 +1,38 @@
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		Pessoa aluno = new Pessoa();
+		aluno.setNome("Jonathan");
+		aluno.setCPF("025.987.563-83");
+		aluno.setSexo('M');
+		
+		Matricula m = new Matricula();
+		
+		for (int x = 0; x <= 3; x++) {
+			m.setNotas(10, x);
+		}
+		
+		System.out.println("Nome: " + aluno.getNome());
+		System.out.println("CPF: " + aluno.getCPF());
+		System.out.println("Sexo: " + aluno.getSexo());
+		System.out.println("Média: " + m.getMedia());
+		System.out.println("Situação: " + m.getSituacao());
+		System.out.println("Informe seu ano de nascimento: ");
+		int x = teclado.nextInt();
+		System.out.println("Informe seu mês de nascimento: ");
+		int y = teclado.nextInt();
+		System.out.println("Informe seu dia de nascimento: ");
+		int z = teclado.nextInt();
+		LocalDate nascimento = LocalDate.of(x, y, z);
+		LocalDate hoje = LocalDate.now();
+		Period idade = Period.between(nascimento, hoje);
+		System.out.printf("A idade de " + aluno.getNome() + " é " + "%s anos, %s mês, %s dias \n", idade.getYears(), idade.getMonths(), idade.getDays());
+
+	}
+
+}

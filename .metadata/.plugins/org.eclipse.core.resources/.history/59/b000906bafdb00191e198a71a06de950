@@ -1,0 +1,78 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		ArrayList pena1 = new ArrayList();
+		ArrayList superPena = new ArrayList();
+		ArrayList medio = new ArrayList();
+		ArrayList pena2 = new ArrayList();
+		System.out.println("Seja bem vindo!");
+		System.out.println("1 - Cadastrar Atletas");
+		System.out.println("2 - Listar Atletas por Categoria");
+		System.out.println("Informe uma opção negativa para sair");
+		int opcao = teclado.nextInt();
+		int pesoI = teclado.nextInt();
+		int idadeI = teclado.nextInt();
+		teclado.nextLine();
+				
+		while (opcao > 0) {
+			switch(opcao){
+				case 1: 
+					System.out.println("1 - Cadastrar Atletas");
+					System.out.print("Informe o peso do atleta: ");
+					pesoI = teclado.nextInt();
+					System.out.print("Informe a idade do atleta: ");
+					idadeI = teclado.nextInt();
+					if ((pesoI <= 20) && (idadeI >=7) && (idadeI <= 10)) {
+						pena1.add((pesoI) + (idadeI));
+						System.out.println("Atleta cadastrado na categoria Pena");
+					}else {
+							if((pesoI <= 20) && (idadeI >=11) && (idadeI <= 13)) {
+								superPena.add(pesoI + idadeI);
+								System.out.println("Atleta cadastrado na categoria Super Pena");
+							}else {
+								if((pesoI >= 21) && (pesoI <= 25) && (idadeI >=7) && (idadeI <= 10)) {
+									medio.add(pesoI + idadeI);
+									System.out.println("Atleta cadastrado na categoria Médio");
+								}else {
+									if((pesoI >= 21) && (pesoI <= 25) && (idadeI >=11) && (idadeI <= 13)) {
+										pena2.add(pesoI + idadeI);
+										System.out.println("Atleta cadastrado na categoria pena");
+									}else {
+										System.out.println("Atleta não compatível com as categorias do campeonato");
+									}
+								}
+							}
+						}
+					break;
+				case 2:
+					System.out.println("2 - Listar Atletas por Categoria");
+					for(int x = 0; x <= pena1.size()-1; x++) {
+						System.out.println(x + " : " + pena1.get(x));
+					}
+					for(int x = 0; x <= superPena.size()-1; x++) {
+						System.out.println(x + " : " + medio.get(x));
+					}
+					for(int x = 0; x <= medio.size()-1; x++) {
+						System.out.println(x + " : " + medio.get(x));
+					}
+					for(int x = 0; x <= pena2.size()-1; x++) {
+						System.out.println(x + " : " + pena2.get(x));
+					}
+					
+				break;
+			}
+			System.out.println("1 - Cadastrar Atletas");
+			System.out.println("2 - Listar Atletas por Categoria");
+			System.out.println("Informe uma opção negativa para sair");
+			opcao = teclado.nextInt();
+			teclado.nextLine();
+	  }
+	}
+
+}
+
+

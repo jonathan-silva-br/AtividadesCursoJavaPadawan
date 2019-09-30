@@ -1,0 +1,16 @@
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Carro c = new Carro();
+		Carro b = new Carro();
+		c.setModelo("DelRey");
+		c.setCor("Prata");
+		b.setModelo("DelRey");
+		b.setCor("Prata");
+		
+		
+
+	}
+
+}

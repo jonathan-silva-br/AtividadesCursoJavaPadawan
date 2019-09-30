@@ -1,0 +1,26 @@
+
+public class Principal {
+
+	public static void main(String[] args) {
+		
+		
+		Carro c = new Carro("DelRey", "Prata");
+		Carro b = new Carro("Kombi", "Preta");
+		
+		
+		if (c == b) {
+			System.out.println("Iguais");
+		}else {
+			System.out.println("Diferentes");
+		}
+		System.out.println(b);
+		System.out.println(c);
+		c.numero = 5;
+		System.out.println(b);
+		System.out.println(c);
+		  
+		
+
+	}
+
+}

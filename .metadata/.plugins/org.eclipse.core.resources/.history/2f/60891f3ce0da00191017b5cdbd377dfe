@@ -1,0 +1,10 @@
+import java.util.ArrayList;
+
+public class ExArrayList {
+	
+	public static void main (String[] args) {
+		ArrayList lista = new ArrayList();
+		lista.add(20);
+	}
+
+}

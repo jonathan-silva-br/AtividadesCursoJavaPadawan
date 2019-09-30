@@ -1,0 +1,7 @@
+
+public class Cliente extends Pessoa {
+	private String senha;
+	
+	private Conta conta;
+
+}

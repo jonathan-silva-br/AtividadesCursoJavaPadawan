@@ -1,0 +1,11 @@
+import java.util.ArrayList;
+
+public class Categorias {
+	ArrayList pena1 = new ArrayList();
+	ArrayList superPena = new ArrayList();
+	ArrayList medio = new ArrayList();
+	ArrayList pena2 = new ArrayList();
+
+	private float peso;
+	private int idade;
+}

@@ -1,0 +1,51 @@
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner (System.in);
+		Aluno aluno[] = new Aluno[5];
+		System.out.println("1 - Cadastrar Aluno");
+		System.out.println("2 - Cadastrar Notas");
+		System.out.println("3 - Listar Aluno/Media/Situação");
+		System.out.println("Opção: (NEGATIVO PARA ENCERRAR)");
+		int opcao = teclado.nextInt();
+		teclado.nextLine();
+		
+		while (opcao >= 0) {
+			switch(opcao) {
+			case 1:
+				for (int x = 0; x <= 4; x++) {
+					aluno[x] = new Aluno();
+					System.out.println("Nome " + x + " : ");
+					aluno[x].setNome(teclado.nextLine());
+				}
+				break;
+			case 2:
+				for (int x = 0; x <= 4; x++) {
+					System.out.println("Informe as notas do aluno " + aluno[x].getNome());
+					for (int y = 0; y <= 3; y++) {
+						[x] = new Matricula();
+					}
+				}
+				break;
+			case 3:
+				for (int x = 0; x <= 4; x++) {
+					System.out.println("Nome: " + aluno[x].getNome());
+				}
+				break;
+			default:
+				System.out.println("Opção inválida!");
+			}
+			System.out.println("1 - Cadastrar Aluno");
+			System.out.println("2 - Cadastrar Notas");
+			System.out.println("3 - Listar Aluno/Media/Situação");
+			System.out.println("Opção: (NEGATIVO PARA ENCERRAR)");
+			opcao = teclado.nextInt();
+			teclado.nextLine();
+		}
+		
+	}
+}

@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Scanner t = new Scanner(System.in);
+		Cliente clientes[] = new Cliente[3];
+		iniciaClientes(clientes);
+		menuNaoLogado();
+		int op = t.nextInt();
+		Cliente clienteLogado = null;
+		while (op != 5) {
+			switch (op) {
+			 if (clienteLogado == null) {
+				 
+			 }
+			}
+		}
+		
+		}
+	
+	public static void menuNaoLogado() {
+		System.out.println("1 - Autenticação");
+		System.out.println("5 - Sair do sistema");
+		System.out.println("Opção: ");
+		
+	}
+	
+	public static void menuLogado() {
+		System.out.println("1 - Autenticação");
+		System.out.println("2 - Depósito");
+		System.out.println("3 - Saque");
+		System.out.println("4 - Saldo");
+		System.out.println("5 - Sair do sistema");
+		System.out.println("Opção: ");
+		
+	}
+
+	public static void iniciaClientes(Cliente clientes[]) {
+		clientes[0] = new Cliente();
+		clientes[0].setNome("Amadeu");
+		clientes[0].setCPF("000.000.000-00");
+		clientes[0].setSenha("0000");
+		clientes[0].setConta(new Conta());
+		clientes[1] = new Cliente();
+		clientes[1].setNome("Juka");
+		clientes[1].setCPF("111.111.111-11");
+		clientes[1].setSenha("1111");
+		clientes[1].setConta(new Conta());
+		clientes[2] = new Cliente();
+		clientes[2].setNome("Amanda");
+		clientes[2].setCPF("222.222.222-22");
+		clientes[2].setSenha("2222");
+		clientes[2].setConta(new Conta());
+		
+	}
+}

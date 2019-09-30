@@ -1,0 +1,8 @@
+
+public class Matricula {
+	
+	private float notas[] = new float[4];
+	private float media;
+	private String situacao;
+
+}

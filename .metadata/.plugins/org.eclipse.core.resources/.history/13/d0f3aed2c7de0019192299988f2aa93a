@@ -1,0 +1,96 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JTextField;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Font;
+
+public class TelaPrincipal {
+
+	private JFrame frame;
+	private JTextField txtNome;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					TelaPrincipal window = new TelaPrincipal();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public TelaPrincipal() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 460, 192);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		txtNome = new JTextField();
+		txtNome.setBounds(10, 43, 426, 20);
+		frame.getContentPane().add(txtNome);
+		txtNome.setColumns(10);
+		
+		JLabel lblNome = new JLabel("Nome");
+		lblNome.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNome.setBounds(10, 18, 82, 14);
+		frame.getContentPane().add(lblNome);
+		
+		JButton btnAdicionar = new JButton("+");
+		btnAdicionar.setEnabled(false);
+		btnAdicionar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnAdicionar.setBounds(300, 74, 63, 64);
+		frame.getContentPane().add(btnAdicionar);
+		
+		JButton btnDeletar = new JButton("-");
+		btnDeletar.setEnabled(false);
+		btnDeletar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		btnDeletar.setBounds(373, 74, 63, 64);
+		frame.getContentPane().add(btnDeletar);
+		
+		JButton btPrimeiro = new JButton("| <");
+		btPrimeiro.setEnabled(false);
+		btPrimeiro.setBounds(10, 74, 63, 64);
+		frame.getContentPane().add(btPrimeiro);
+		
+		JButton btAnterior = new JButton("<");
+		btAnterior.setEnabled(false);
+		btAnterior.setBounds(83, 74, 63, 64);
+		frame.getContentPane().add(btAnterior);
+		
+		JButton btProximo = new JButton(">");
+		btProximo.setEnabled(false);
+		btProximo.setBounds(156, 74, 63, 64);
+		frame.getContentPane().add(btProximo);
+		
+		JButton btUltimo = new JButton("> |");
+		btUltimo.setEnabled(false);
+		btUltimo.setBounds(229, 74, 63, 64);
+		frame.getContentPane().add(btUltimo);
+	}
+}

@@ -1,0 +1,24 @@
+
+public class Pessoa {
+	//atributo
+	//nome deve possuir pelo menos 
+	String nome;
+	String cpf;
+	public String setCPF;
+	
+	public void setNome(String nome) {
+		if (nome.length() >= 3) {
+			this.nome = nome;
+		}else {
+			System.out.println("Nome inválido!");
+		}
+	}
+	
+	public void setCPF(String cpf) {
+		if (cpf.length() == 14) {
+			this.cpf = cpf;
+		}else {
+			System.out.println("CPF inválido!");
+		}
+	}
+}

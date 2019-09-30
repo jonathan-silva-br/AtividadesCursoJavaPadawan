@@ -1,0 +1,20 @@
+import java.util.ArrayList;
+
+public class Categorias {
+	ArrayList pena1 = new ArrayList();
+	ArrayList superPena = new ArrayList();
+	ArrayList medio = new ArrayList();
+	ArrayList pena2 = new ArrayList();
+
+	private int comparacao;
+	
+	public int getComparacao() {
+		for(int x = 0; x <= peso.size()-1; x++) {
+			System.out.println(x + " : " + peso.get(x));
+		}
+		return 0;
+	}	
+	
+	
+	
+}

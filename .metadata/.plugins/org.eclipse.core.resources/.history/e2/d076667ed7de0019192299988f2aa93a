@@ -1,0 +1,132 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JTextField;
+
+public class Banco {
+
+	private JFrame frame;
+	private JTextField textField;
+	private JTextField textField_1;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Banco window = new Banco();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Banco() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 702, 384);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JLabel lblSelecioneSuaOpo = new JLabel("Selecione sua op\u00E7\u00E3o");
+		lblSelecioneSuaOpo.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblSelecioneSuaOpo.setBounds(225, 151, 187, 25);
+		frame.getContentPane().add(lblSelecioneSuaOpo);
+		
+		JLabel lblCliente = new JLabel("CLIENTE");
+		lblCliente.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblCliente.setBounds(166, 69, 64, 25);
+		frame.getContentPane().add(lblCliente);
+		
+		JLabel lblCpf = new JLabel("CPF");
+		lblCpf.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblCpf.setBounds(372, 69, 64, 25);
+		frame.getContentPane().add(lblCpf);
+		
+		JLabel label = new JLabel("0");
+		label.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		label.setBounds(269, 71, 47, 21);
+		frame.getContentPane().add(label);
+		
+		JLabel label_1 = new JLabel("0");
+		label_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		label_1.setBounds(475, 69, 47, 21);
+		frame.getContentPane().add(label_1);
+		
+		JButton btnDepositar = new JButton("DEP\u00D3SITO");
+		btnDepositar.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnDepositar.setBounds(45, 215, 99, 23);
+		frame.getContentPane().add(btnDepositar);
+		
+		JButton btnSaque = new JButton("SAQUE");
+		btnSaque.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnSaque.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnSaque.setBounds(200, 215, 89, 23);
+		frame.getContentPane().add(btnSaque);
+		
+		JButton btnSaldo = new JButton("SALDO");
+		btnSaldo.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnSaldo.setBounds(345, 215, 89, 23);
+		frame.getContentPane().add(btnSaldo);
+		
+		JButton btnExtrato = new JButton("EXTRATO");
+		btnExtrato.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnExtrato.setBounds(492, 215, 99, 23);
+		frame.getContentPane().add(btnExtrato);
+		
+		textField = new JTextField();
+		textField.setText("0");
+		textField.setBounds(58, 268, 86, 20);
+		frame.getContentPane().add(textField);
+		textField.setColumns(10);
+		
+		textField_1 = new JTextField();
+		textField_1.setText("0");
+		textField_1.setColumns(10);
+		textField_1.setBounds(200, 268, 89, 20);
+		frame.getContentPane().add(textField_1);
+		
+		JLabel lblNewLabel = new JLabel("0");
+		lblNewLabel.setBounds(345, 268, 89, 21);
+		frame.getContentPane().add(lblNewLabel);
+		
+		JLabel lblBemVindoAo = new JLabel("BEM VINDO AO NUBANCO");
+		lblBemVindoAo.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblBemVindoAo.setBounds(207, 11, 246, 25);
+		frame.getContentPane().add(lblBemVindoAo);
+		
+		JButton button = new JButton("<");
+		button.setBounds(10, 69, 41, 33);
+		frame.getContentPane().add(button);
+		
+		JButton button_1 = new JButton(">");
+		button_1.setBounds(632, 69, 41, 33);
+		frame.getContentPane().add(button_1);
+		
+		JButton btnSair = new JButton("Sair");
+		btnSair.setBounds(587, 311, 89, 23);
+		frame.getContentPane().add(btnSair);
+	}
+
+}

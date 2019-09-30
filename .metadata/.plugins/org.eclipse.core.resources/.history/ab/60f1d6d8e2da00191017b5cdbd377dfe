@@ -1,0 +1,49 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ExArrayList {
+	
+	public static void main (String[] args) {
+		ArrayList lista = new ArrayList();
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("1 - Adicionar valores");
+		System.out.println("2 - Remover valor");
+		System.out.println("3 - Buscar valor");
+		System.out.println("4 - Listar valores");
+		System.out.println("Negativo para encerrar");
+		int opcao = teclado.nextInt();
+		teclado.nextInt();
+		
+		while (opcao > 0) {
+			switch (opcao) {
+				case 1:
+					System.out.println("Informe um valor: ");
+					lista.add(x, teclado.nextInt());
+					break;
+				case 2:
+					break;
+				case 3:
+					break;
+				case 4:
+					break;
+				default:
+					System.out.println("Opção inválida!");
+			}
+			System.out.println("1 - Adicionar valores");
+			System.out.println("2 - Remover valor");
+			System.out.println("3 - Buscar valor");
+			System.out.println("4 - Listar valores");
+			System.out.println("Negativo para encerrar");
+			opcao = teclado.nextInt();
+			teclado.nextInt();
+		}
+		
+		
+		for(int x = 0; x <= lista.size()-1; x++) {
+			System.out.println(lista.get(x));
+		}
+		System.out.println("Tamanho da lista é de: " + lista.size());
+		
+	}
+
+}

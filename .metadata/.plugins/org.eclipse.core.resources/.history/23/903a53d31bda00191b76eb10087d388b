@@ -1,0 +1,6 @@
+
+public class Matricula {
+	
+	float notas[] = new float[4];
+
+}

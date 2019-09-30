@@ -1,0 +1,13 @@
+import java.util.ArrayList;
+
+public class ExArrayList {
+	
+	public static void main (String[] args) {
+		ArrayList lista = new ArrayList();
+		lista.add(20);
+		lista.add(25);
+		lista.add(15);
+		System.out.println(lista.get(0));
+	}
+
+}

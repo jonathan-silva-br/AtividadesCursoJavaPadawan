@@ -1,0 +1,34 @@
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner (System.in);
+		Aluno aluno = new Aluno();
+		System.out.println("1 - Cadastrar Aluno");
+		System.out.println("2 - Cadastrar Notas");
+		System.out.println("3 - Listar Aluno/Media/Situação");
+		System.out.println("Opção: (NEGATIVO PARA ENCERRAR)");
+		int opcao = teclado.nextInt();
+		
+		while (opcao >= 0) {
+			switch(opcao) {
+			case 1:
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			default:
+				System.out.println("Opção inválida!");
+			}
+			System.out.println("1 - Cadastrar Aluno");
+			System.out.println("2 - Cadastrar Notas");
+			System.out.println("3 - Listar Aluno/Media/Situação");
+			System.out.println("Opção: (NEGATIVO PARA ENCERRAR)");
+			opcao = teclado.nextInt();
+		}
+		
+}

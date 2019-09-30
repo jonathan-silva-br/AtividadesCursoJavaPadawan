@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+
+public class Categorias {
+	ArrayList pena1 = new ArrayList();
+	ArrayList superPena = new ArrayList();
+	ArrayList medio = new ArrayList();
+	ArrayList pena2 = new ArrayList();
+
+	private float peso;
+	private int idade;
+	private int comparacao;
+	
+	public int getComparacao() {
+		return 0;
+	}	
+	
+	
+	public void setPeso(float peso) {
+		this.peso = peso;
+	}
+	
+	public void setIdade(int idade) {
+		this.idade = idade;
+	}
+	
+	
+}

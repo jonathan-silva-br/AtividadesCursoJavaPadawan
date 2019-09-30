@@ -1,0 +1,20 @@
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Carro c = new Carro();
+		
+		c.setModelo("DelRey");
+		c.setCor("Prata");
+		
+		System.out.println("Carro c: " + c.getModelo());
+		System.out.println("Cor c: " + c.getCor());
+		
+		Carro b = c;
+		
+		System.out.println("Carro b: " + b.getModelo());
+		System.out.println("Cor b: " + b.getCor());
+
+	}
+
+}

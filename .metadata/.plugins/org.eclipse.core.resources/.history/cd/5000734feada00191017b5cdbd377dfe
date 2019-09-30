@@ -1,0 +1,12 @@
+
+public class PrincipalExemploOwerrite {
+
+	public static void main(String[] args) {
+		Pessoa p = new Pessoa();
+		p.setNome("Beatriz");
+		
+		System.out.println(p);
+
+	}
+
+}

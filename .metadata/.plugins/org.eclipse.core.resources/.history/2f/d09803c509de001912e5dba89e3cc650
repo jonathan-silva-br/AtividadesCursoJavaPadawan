@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+
+public class Conta {
+	private double saldo;
+	private ArrayList extrato = new ArrayList(); 
+	
+	public double getSaldo() {
+		return saldo;
+	}
+
+	public void deposito(double valor) {
+		if (valor > 0) {
+			this.saldo += valor;
+			extrato.add("Depósito de R$" + valor);
+		}
+	}
+	
+	public double saque(double valor) {
+		if (getSaldo() >= valor) {
+			this.saldo -= valor;
+			extrato.add("Saque de R$" + valor);
+			return valor;
+		}else {
+			return -1; //-1 saldo insuficiente;
+		}
+	}
+	
+	public void 
+}

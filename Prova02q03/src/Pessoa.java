@@ -1,0 +1,86 @@
+
+public class Pessoa {
+	private String nome;
+	private String cpf;
+	private char sexo;
+	private int peso;
+	private int idade;
+		
+	public String getNome() {
+		return nome;
+	}
+	
+	public String getCPF() {
+		return cpf;
+	}
+	
+	public String getSexo() {
+		if(sexo == 'M' || sexo == 'm') {
+			return "Masculino";
+		}else {
+			if(sexo == 'F' || sexo == 'f') {
+				return "Feminino";
+			}else {
+				return "Inválido";
+			}
+		}
+	}
+	
+		
+	public void setNome(String nome) {
+		if (nome.length() >= 3) {
+			this.nome = nome;
+		}else {
+			System.out.println("Nome inválido!");
+		}
+	}
+	
+	public void setCPF(String cpf) {
+		if (cpf.length() == 14) {
+			this.cpf = cpf;
+		}else {
+			System.out.println("CPF inválido!");
+		}
+	}
+	
+	public void setSexo(char sexo) {
+		if ((sexo == 'm') || (sexo == 'M') || (sexo == 'f') || (sexo == 'F')) {
+			this.sexo = sexo;
+		}else {
+			System.out.println("Sexo inválido!");
+		}
+	}
+	
+	public String toString() {
+
+
+		String s = super.toString();
+		s += "\n Nome: " + getNome();
+		s += "\n CPF: " + getCPF();
+		s += "\n Sexo: " + getSexo();
+		return s;
+	}
+	
+
+	public int getPeso() {
+
+		return peso;
+	}
+	
+
+	public void setPeso(int peso) {
+
+		this.peso = peso;
+	}
+	
+
+	public int getIdade() {
+		return idade;
+	}
+	
+
+	public void setIdade(int idade) {
+		this.idade = idade;
+	}
+	
+}

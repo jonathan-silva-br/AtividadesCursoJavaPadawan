@@ -1,0 +1,17 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Scanner t = new Scanner(System.in);
+		ArrayList lista = new ArrayList();
+		
+		System.out.println("2 - Listar Atleta");
+		System.out.println("Opção");
+		int op = t.nextInt();
+		while ()
+
+	}
+
+}

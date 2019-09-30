@@ -1,0 +1,10 @@
+
+public class Atlet extends Pessoa {
+	
+	public String getCategoria() {
+		String c = "";
+		
+		return c;
+	}
+
+}

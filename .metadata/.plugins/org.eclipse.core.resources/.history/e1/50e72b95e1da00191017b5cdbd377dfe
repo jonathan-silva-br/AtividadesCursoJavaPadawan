@@ -1,0 +1,21 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ExArrayList {
+	
+	public static void main (String[] args) {
+		ArrayList lista = new ArrayList();
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("1 - Adicionar valores");
+		System.out.println("2 - Remover valor");
+		System.out.println("3 - Buscar valor");
+		System.out.println("4 - Listar valores");
+		
+		for(int x = 0; x <= lista.size()-1; x++) {
+			System.out.println(lista.get(x));
+		}
+		System.out.println("Tamanho da lista é de: " + lista.size());
+		
+	}
+
+}
